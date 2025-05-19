@@ -1,0 +1,9 @@
+apiVersion: customjobs.mshyshov.site/v1alpha1
+kind: ScheduledJob
+metadata:
+  labels:
+    app.kubernetes.io/name: sheduledjob
+    app.kubernetes.io/managed-by: kustomize
+  name: scheduledjob-sample
+spec:
+  # TODO(user): Add fields here

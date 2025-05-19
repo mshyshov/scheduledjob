@@ -1,0 +1,27 @@
+# permissions for end users to edit scheduledjobs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: sheduledjob
+    app.kubernetes.io/managed-by: kustomize
+  name: scheduledjob-editor-role
+rules:
+- apiGroups:
+  - customjobs.mshyshov.site
+  resources:
+  - scheduledjobs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - customjobs.mshyshov.site
+  resources:
+  - scheduledjobs/status
+  verbs:
+  - get

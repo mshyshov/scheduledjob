@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- customjobs_v1alpha1_scheduledjob.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

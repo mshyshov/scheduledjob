@@ -1,0 +1,23 @@
+# permissions for end users to view scheduledjobs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: sheduledjob
+    app.kubernetes.io/managed-by: kustomize
+  name: scheduledjob-viewer-role
+rules:
+- apiGroups:
+  - customjobs.mshyshov.site
+  resources:
+  - scheduledjobs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - customjobs.mshyshov.site
+  resources:
+  - scheduledjobs/status
+  verbs:
+  - get
